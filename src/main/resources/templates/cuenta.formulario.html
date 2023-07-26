@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crear Nueva Cuenta</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Crear Nueva Cuenta</h1>
+  <form action="/cuentas/nueva" method="post">
+    <div class="form-group">
+      <input type="text" name="nombre" placeholder="Nombre de la cuenta" id="nombre">
+      <input type="text" name="descripcion" placeholder="Descripción de la cuenta" id="descripcion">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+  <a class="btn btn-secondary mt-3" href="/cuentas">Volver a la lista de categorías</a>
+</div>
+</body>
+</html>

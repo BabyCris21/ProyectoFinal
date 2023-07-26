@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crear Nueva Categoría</title>
+  <!-- Enlace al archivo CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Crear Nueva Categoría</h1>
+  <form action="/categorias/nueva" method="post">
+    <div class="form-group">
+      <label for="nombre">Nombre de la categoría:</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+  <a class="btn btn-secondary mt-3" href="/categorias">Volver a la lista de categorías</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Listado de Cuentas</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <span>Mis Finanzas</span>
+  </div>
+  <div class="header-right">
+    <span>Hola, Usuario</span>
+  </div>
+</header>
+<nav>
+  <ul>
+    <li><a href="resumen.html">Resumen</a></li>
+    <li><a href="ingresos.html">Ingresos</a></li>
+    <li><a href="egresos.html">Egresos</a></li>
+    <li><a href="cuentas.html" class="active">Cuentas</a></li>
+    <li><a href="/categorias">Categorías</a></li>
+    <li><a href="configuracion.html">Configuración</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <h1>Listado de Cuentas</h1>
+  <table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Fecha de Creación</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cuenta : ${cuentas}">
+      <td th:text="${cuenta.id}"></td>
+      <td th:text="${cuenta.nombre}"></td>
+      <td th:text="${cuenta.descripcion}"></td>
+      <td th:text="${cuenta.fechaCreacion}"></td>
+    </tr>
+    </tbody>
+  </table>
+  <button class="btn-add"><a href="/cuentas/nueva">Añadir cuenta</a></button>
+
+</div>
+</body>
+</html>

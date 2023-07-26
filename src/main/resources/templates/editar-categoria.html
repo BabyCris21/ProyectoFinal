@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editar Categoría</title>
+  <!-- Enlace al archivo CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+  <h1>Editar Categoría</h1>
+  <!-- Agregar código para mostrar el mensaje de error si existe -->
+  <div th:if="${error}" class="alert alert-danger">
+    <p th:text="${error}"></p>
+  </div>
+  <form action="/categorias/actualizar/{id}" method="post">
+    <input type="hidden" th:attr="value=${cat.id}" name="id"/>
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" class="form-control" th:field="${cat.nombre}" id="nombre" name="nombre" required/>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+  </form>
+</div>
+</body>
+</html>
